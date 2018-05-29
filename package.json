@@ -1,0 +1,11 @@
+{
+    "name": "nightwatch_chromedriver_tests",
+    "version": "0.0.1",
+    "scripts": {
+        "test": "nightwatch -c config.js"
+    },
+    "dependencies": {
+        "chromedriver": "^2.38.3",
+        "nightwatch": "^0.9.21"
+    }
+}
