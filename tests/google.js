@@ -10,9 +10,9 @@ describe('Google  search', function () {
         done();
     });
 
-    context('search for a valid value', function () {
+    context('search for values', function () {
 
-        it('uses BDD to run the Google simple test', function (browser) {
+        it('a valid string value', function (browser) {
             var google = browser.page.googlePage();
             google
                 .navigate()
@@ -26,6 +26,4 @@ describe('Google  search', function () {
         });
 
     });
-
-    context('viewport tests', function() {})
 });

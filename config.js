@@ -16,14 +16,9 @@ module.exports = {
                 browserName: 'chrome',
                 acceptSslCerts: true,
                 chromeOptions: {
-                    //args: ["headless", "no-sandbox", "disable-gpu"]
+                    args: ["headless", "no-sandbox", "disable-gpu"]
                 }
             },
         },
     },
-    // Should permit parallel tests - github issue related to this not working.
-    "test_workers": {
-        "enabled": true,
-        "workers": "auto"
-    }
 };
