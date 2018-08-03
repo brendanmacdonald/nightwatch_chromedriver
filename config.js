@@ -1,6 +1,5 @@
 module.exports = {
     src_folders: ["tests"],
-    output_folder: 'reports',
     page_objects_path: 'pageObjects',
     globals_path: 'globals.js',
     selenium: {
@@ -11,7 +10,16 @@ module.exports = {
             selenium_port: 9515,
             selenium_host: 'localhost',
             default_path_prefix: '',
-            "test_runner" : "mocha",
+            test_runner : {
+                type : 'mocha',
+                options : {
+                  ui : "bdd",
+                  reporter : 'mocha-junit-reporter',
+                  reporterOptions: {
+                    mochaFile: 'reports/results.xml'
+                  }
+                }
+              },
             desiredCapabilities: {
                 browserName: 'chrome',
                 acceptSslCerts: true,
